@@ -1,3 +1,4 @@
+import groovy.transform.EqualsAndHashCode
 import groovy.transform.TupleConstructor
 
 /**
@@ -5,6 +6,7 @@ import groovy.transform.TupleConstructor
  * @since 3/15/18
  */
 @TupleConstructor
+@EqualsAndHashCode
 class Person {
 
 	//https://issues.apache.org/jira/browse/GROOVY-1875
@@ -53,22 +55,5 @@ class Person {
 				", address=" + address +
 				", netWorth=" + netWorth +
 				'}'
-	}
-
-	@Override
-	boolean equals(Object o) {
-		if (this == o) return true
-		if (!(o instanceof Person)) return false
-		Person person = (Person) o
-		return Objects.equals(name, person.name) &&
-				Objects.equals(surname, person.surname) &&
-				Objects.equals(emails, person.emails) &&
-				Objects.equals(address, person.address) &&
-				Objects.equals(netWorth, person.netWorth)
-	}
-
-	@Override
-	int hashCode() {
-		return Objects.hash(name, surname, emails, address, netWorth)
 	}
 }
