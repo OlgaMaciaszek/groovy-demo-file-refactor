@@ -7,28 +7,4 @@ class Address {
 	String streetAddress
 	String postalCode
 	String city
-
-	String getStreetAddress() {
-		return streetAddress
-	}
-
-	void setStreetAddress(String streetAddress) {
-		this.streetAddress = streetAddress
-	}
-
-	String getPostalCode() {
-		return postalCode
-	}
-
-	void setPostalCode(String postalCode) {
-		this.postalCode = postalCode
-	}
-
-	String getCity() {
-		return city
-	}
-
-	void setCity(String city) {
-		this.city = city
-	}
 }
