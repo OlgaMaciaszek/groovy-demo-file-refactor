@@ -4,11 +4,13 @@
  */
 class Person {
 
-	private String name
-	private String surname
-	private List<String> emails = []
-	private Address address
-	private Integer netWorth
+	//https://issues.apache.org/jira/browse/GROOVY-1875
+
+	String name
+	String surname
+	List<String> emails = []
+	Address address
+	Integer netWorth
 
 	Person() {
 	}

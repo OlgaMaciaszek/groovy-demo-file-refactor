@@ -4,9 +4,9 @@
  */
 class Address {
 
-	private String streetAddress
-	private String postalCode
-	private String city
+	String streetAddress
+	String postalCode
+	String city
 
 	String getStreetAddress() {
 		return streetAddress

@@ -2,7 +2,6 @@
  * @author Olga Maciaszek-Sharma
  * @since 3/15/18
  */
-
 Person person = new Person("Anna", "Smith")
 System.out.println(person.getFullName())
 System.out.println("Printing city: " + person.getCity())
