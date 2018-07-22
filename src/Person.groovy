@@ -24,7 +24,7 @@ class Person {
 	}
 
 	Integer getNetWorth() {
-		return netWorth != null ? netWorth : 0
+		return netWorth ?: 0
 	}
 
 	void setNetWorth(Integer netWorth) {
@@ -48,10 +48,7 @@ class Person {
 	}
 
 	String getCity() {
-		if (address != null) {
-			return address.getCity()
-		}
-		return null
+		return address?.city
 	}
 
 	void printFirstEmail() {
