@@ -6,7 +6,7 @@ class Person {
 
 	private String name
 	private String surname
-	private List<String> emails = new ArrayList<>()
+	private List<String> emails = []
 	private Address address
 	private Integer netWorth
 
@@ -44,7 +44,7 @@ class Person {
 	}
 
 	void addEmail(String email) {
-		emails.add(email)
+		emails << email
 	}
 
 	String getCity() {
@@ -64,7 +64,7 @@ class Person {
 	}
 
 	boolean sameEmails(List<String> emails) {
-		return this.emails.equals(emails)
+		return this.emails == emails
 	}
 
 	@Override
