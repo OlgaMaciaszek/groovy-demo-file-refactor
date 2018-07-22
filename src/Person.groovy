@@ -48,11 +48,11 @@ class Person {
 	}
 
 	void printFirstEmail() {
-		System.out.print('Printing first email: ')
+		println 'Printing first email: '
 		if (emails) {
-			System.out.println(emails[0])
+			println emails[0]
 		} else {
-			System.out.println('-')
+			println '-'
 		}
 	}
 
