@@ -1,4 +1,5 @@
 import groovy.transform.EqualsAndHashCode
+import groovy.transform.ToString
 import groovy.transform.TupleConstructor
 
 /**
@@ -7,6 +8,7 @@ import groovy.transform.TupleConstructor
  */
 @TupleConstructor
 @EqualsAndHashCode
+@ToString
 class Person {
 
 	//https://issues.apache.org/jira/browse/GROOVY-1875
@@ -44,16 +46,5 @@ class Person {
 
 	boolean sameEmails(List<String> emails) {
 		return this.emails == emails
-	}
-
-	@Override
-	String toString() {
-		return "DemoClass{" +
-				"name='" + name + '\'' +
-				", surname='" + surname + '\'' +
-				", emails=" + emails +
-				", address=" + address +
-				", netWorth=" + netWorth +
-				'}'
 	}
 }
