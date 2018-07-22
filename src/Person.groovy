@@ -56,8 +56,8 @@ class Person {
 
 	void printFirstEmail() {
 		System.out.print("Printing first email: ")
-		if (emails.size() >= 1) {
-			System.out.println(emails.get(0))
+		if (emails) {
+			System.out.println(emails[0])
 		} else {
 			System.out.println("-")
 		}
