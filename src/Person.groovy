@@ -2,7 +2,7 @@
  * @author Olga Maciaszek-Sharma
  * @since 3/15/18
  */
-public class Person {
+class Person {
 
 	private String name
 	private String surname
@@ -10,51 +10,51 @@ public class Person {
 	private Address address
 	private Integer netWorth
 
-	public Person() {
+	Person() {
 	}
 
-	public Person(String name, String surname) {
+	Person(String name, String surname) {
 		this.name = name
 		this.surname = surname
 	}
 
-	public Person(String name, String surname, List<String> emails) {
+	Person(String name, String surname, List<String> emails) {
 		this(name, surname)
 		this.emails = emails
 	}
 
-	public Integer getNetWorth() {
+	Integer getNetWorth() {
 		return netWorth != null ? netWorth : 0
 	}
 
-	public void setNetWorth(Integer netWorth) {
+	void setNetWorth(Integer netWorth) {
 		this.netWorth = netWorth
 	}
 
-	public List<String> getEmails() {
+	List<String> getEmails() {
 		return emails
 	}
 
-	public String getFullName() {
+	String getFullName() {
 		return getFullName("Ms.")
 	}
 
-	public String getFullName(String prefix) {
+	String getFullName(String prefix) {
 		return prefix + " " + name + " " + surname
 	}
 
-	public void addEmail(String email) {
+	void addEmail(String email) {
 		emails.add(email)
 	}
 
-	public String getCity() {
+	String getCity() {
 		if (address != null) {
 			return address.getCity()
 		}
 		return null
 	}
 
-	public void printFirstEmail() {
+	void printFirstEmail() {
 		System.out.print("Printing first email: ")
 		if (emails.size() >= 1) {
 			System.out.println(emails.get(0))
@@ -63,12 +63,12 @@ public class Person {
 		}
 	}
 
-	public boolean sameEmails(List<String> emails) {
+	boolean sameEmails(List<String> emails) {
 		return this.emails.equals(emails)
 	}
 
 	@Override
-	public String toString() {
+	String toString() {
 		return "DemoClass{" +
 				"name='" + name + '\'' +
 				", surname='" + surname + '\'' +
@@ -79,7 +79,7 @@ public class Person {
 	}
 
 	@Override
-	public boolean equals(Object o) {
+	boolean equals(Object o) {
 		if (this == o) return true
 		if (!(o instanceof Person)) return false
 		Person person = (Person) o
@@ -91,7 +91,7 @@ public class Person {
 	}
 
 	@Override
-	public int hashCode() {
+	int hashCode() {
 		return Objects.hash(name, surname, emails, address, netWorth)
 	}
 }
