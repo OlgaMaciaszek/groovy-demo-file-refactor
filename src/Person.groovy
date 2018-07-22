@@ -1,7 +1,10 @@
+import groovy.transform.TupleConstructor
+
 /**
  * @author Olga Maciaszek-Sharma
  * @since 3/15/18
  */
+@TupleConstructor
 class Person {
 
 	//https://issues.apache.org/jira/browse/GROOVY-1875
@@ -11,19 +14,6 @@ class Person {
 	List<String> emails = []
 	Address address
 	Integer netWorth
-
-	Person() {
-	}
-
-	Person(String name, String surname) {
-		this.name = name
-		this.surname = surname
-	}
-
-	Person(String name, String surname, List<String> emails) {
-		this(name, surname)
-		this.emails = emails
-	}
 
 	Integer getNetWorth() {
 		return netWorth ?: 0
