@@ -20,15 +20,15 @@ class Person {
 	}
 
 	String getFullName(String prefix = 'Ms.') {
-		return "$prefix $name $surname"
+		return "$prefix ${name.toLowerCase()} ${surname}"
 	}
 
 	void addEmail(String email) {
 		emails << email
 	}
 
-	String getCity() {
-		return address?.city
+	void getCity() {
+		println address?.city
 	}
 
 	void printFirstEmail() {
