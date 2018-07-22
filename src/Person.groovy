@@ -29,14 +29,6 @@ class Person {
 		return netWorth ?: 0
 	}
 
-	void setNetWorth(Integer netWorth) {
-		this.netWorth = netWorth
-	}
-
-	List<String> getEmails() {
-		return emails
-	}
-
 	String getFullName(String prefix = 'Ms.') {
 		return "$prefix $name $surname"
 	}
