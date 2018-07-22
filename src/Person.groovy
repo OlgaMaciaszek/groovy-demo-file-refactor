@@ -1,14 +1,10 @@
-import groovy.transform.EqualsAndHashCode
-import groovy.transform.ToString
-import groovy.transform.TupleConstructor
+import groovy.transform.Canonical
 
 /**
  * @author Olga Maciaszek-Sharma
  * @since 3/15/18
  */
-@TupleConstructor
-@EqualsAndHashCode
-@ToString
+@Canonical
 class Person {
 
 	//https://issues.apache.org/jira/browse/GROOVY-1875
