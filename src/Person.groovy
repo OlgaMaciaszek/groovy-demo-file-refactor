@@ -35,12 +35,8 @@ class Person {
 		return emails
 	}
 
-	String getFullName() {
-		return getFullName("Ms.")
-	}
-
-	String getFullName(String prefix) {
-		return prefix + " " + name + " " + surname
+	String getFullName(String prefix = 'Ms.') {
+		return "$prefix $name $surname"
 	}
 
 	void addEmail(String email) {
@@ -52,7 +48,7 @@ class Person {
 	}
 
 	void printFirstEmail() {
-		System.out.print("Printing first email: ")
+		System.out.print('Printing first email: ')
 		if (emails) {
 			System.out.println(emails[0])
 		} else {
