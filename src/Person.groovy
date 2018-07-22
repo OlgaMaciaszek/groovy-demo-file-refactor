@@ -52,7 +52,7 @@ class Person {
 		if (emails) {
 			System.out.println(emails[0])
 		} else {
-			System.out.println("-")
+			System.out.println('-')
 		}
 	}
 
